@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="@color/primary_light"
+        android:pathData="M100,100 m-80,0 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0" />
+
+    <!-- Paper -->
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M60,140 L140,140 L140,180 L60,180 Z" />
+    
+    <!-- Paper curl -->
+    <path
+        android:fillColor="@color/primary_light"
+        android:pathData="M60,180 L140,180 L140,190 L60,190 Z" />
+    
+    <!-- Paper lines -->
+    <path
+        android:strokeColor="@color/gray"
+        android:strokeWidth="1"
+        android:pathData="M70,150 L130,150" />
+    <path
+        android:strokeColor="@color/gray"
+        android:strokeWidth="1"
+        android:pathData="M70,155 L130,155" />
+    <path
+        android:strokeColor="@color/gray"
+        android:strokeWidth="1"
+        android:pathData="M70,160 L120,160" />
+    <path
+        android:strokeColor="@color/gray"
+        android:strokeWidth="1"
+        android:pathData="M70,165 L110,165" />
+
+    <!-- Person body -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M85,80 L115,80 L115,120 L85,120 Z" />
+    
+    <!-- Person pants -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M85,120 L115,120 L115,140 L85,140 Z" />
+    
+    <!-- Person head -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M90,60 L110,60 L110,80 L90,80 Z" />
+    
+    <!-- Person hair -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M88,58 L112,58 L112,62 L88,62 Z" />
+    
+    <!-- Person eyes -->
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M94,68 L98,68 L98,72 L94,72 Z" />
+    <path
+        android:fillColor="@color/white"
+        android:pathData="M102,68 L106,68 L106,72 L102,72 Z" />
+    
+    <!-- Person smile -->
+    <path
+        android:strokeColor="@color/black"
+        android:strokeWidth="1"
+        android:pathData="M95,75 Q100,78 105,75" />
+
+    <!-- Pen -->
+    <path
+        android:fillColor="@color/primary_light"
+        android:pathData="M120,90 L140,85 L142,87 L122,92 Z" />
+    <path
+        android:fillColor="@color/gray"
+        android:pathData="M140,85 L142,87 L142,89 L140,87 Z" />
+
+    <!-- Lightbulb -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M50,70 L70,70 L70,90 L50,90 Z" />
+    <path
+        android:fillColor="@color/primary_light"
+        android:pathData="M48,90 L72,90 L72,95 L48,95 Z" />
+    
+    <!-- Lightbulb rays -->
+    <path
+        android:strokeColor="@color/black"
+        android:strokeWidth="1"
+        android:pathData="M45,65 L55,75" />
+    <path
+        android:strokeColor="@color/black"
+        android:strokeWidth="1"
+        android:pathData="M75,65 L65,75" />
+    <path
+        android:strokeColor="@color/black"
+        android:strokeWidth="1"
+        android:pathData="M60,60 L60,70" />
+
+</vector> 
