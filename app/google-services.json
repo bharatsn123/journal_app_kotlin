@@ -1,0 +1,29 @@
+  {
+  "project_info": {
+    "project_number": "590079887793",
+    "project_id": "journalkotlin-d430c",
+    "storage_bucket": "journalkotlin-d430c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590079887793:android:f0a3e08632ddd48a205590",
+        "android_client_info": {
+          "package_name": "com.bharatcoding.journalapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9WXZq5X1L9A0LKofLo_L8NRwnolbzzGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
