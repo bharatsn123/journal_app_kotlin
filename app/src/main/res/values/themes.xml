@@ -1,9 +1,89 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.JournalApplication" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Material Design 3 Color Scheme -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+        
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryContainer">@color/accent</item>
+        <item name="colorOnSecondaryContainer">@color/black</item>
+        
+        <item name="colorTertiary">@color/primary_dark</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/primary_light</item>
+        <item name="colorOnTertiaryContainer">@color/primary_dark</item>
+        
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error</item>
+        <item name="colorOnErrorContainer">@color/on_error</item>
+        
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/gray_light</item>
+        
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Typography -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.JournalApplication.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.JournalApplication.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.JournalApplication.HeadlineSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.JournalApplication.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.JournalApplication.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.JournalApplication.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.JournalApplication.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.JournalApplication.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.JournalApplication.LabelSmall</item>
     </style>
 
     <style name="Theme.JournalApplication" parent="Base.Theme.JournalApplication" />
+    
+    <!-- Typography Styles -->
+    <style name="TextAppearance.JournalApplication.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    
+    <style name="TextAppearance.JournalApplication.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/gray</item>
+    </style>
 </resources>
