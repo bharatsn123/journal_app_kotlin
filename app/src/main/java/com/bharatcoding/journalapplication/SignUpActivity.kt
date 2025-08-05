@@ -1,5 +1,6 @@
 package com.bharatcoding.journalapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -14,21 +15,45 @@ import com.google.firebase.auth.auth
 class SignUpActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignUpBinding
     private lateinit var auth: FirebaseAuth
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivitySignUpBinding>(this, R.layout.activity_sign_up)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
         // Initialize Firebase Auth
         auth = Firebase.auth
 
         binding.signUpButton.setOnClickListener() {
             createUser()
         }
-
     }
 
     private fun createUser() {
-        val email = binding.emailInput.text.toString()
-        val password = binding.passwordInput.text.toString()
+        val email = binding.emailInput.text.toString().trim()
+        val password = binding.passwordInput.text.toString().trim()
+
+        // Validate input
+        if (email.isEmpty()) {
+            binding.emailLayout.error = "Email is required"
+            return
+        }
+
+        if (password.isEmpty()) {
+            binding.passwordLayout.error = "Password is required"
+            return
+        }
+
+        if (password.length < 6) {
+            binding.passwordLayout.error = "Password must be at least 6 characters"
+            return
+        }
+
+        // Clear previous errors
+        binding.emailLayout.error = null
+        binding.passwordLayout.error = null
+
+        // Show loading state
+        binding.signUpButton.isEnabled = false
+        binding.signUpButton.text = "Creating Account..."
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -40,18 +65,33 @@ class SignUpActivity : AppCompatActivity() {
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w("TAG", "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext,
-                        "Authentication failed.",
-                        Toast.LENGTH_SHORT,
-                    ).show()
+                    val errorMessage = when {
+                        task.exception?.message?.contains("email address is already in use") == true -> 
+                            "An account with this email already exists. Please sign in instead."
+                        task.exception?.message?.contains("badly formatted") == true -> 
+                            "Please enter a valid email address."
+                        task.exception?.message?.contains("network") == true -> 
+                            "Network error. Please check your internet connection."
+                        else -> "Account creation failed. Please try again."
+                    }
+                    Toast.makeText(baseContext, errorMessage, Toast.LENGTH_LONG).show()
                     updateUI(null)
                 }
             }
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        TODO("Not yet implemented")
+        // Reset button state
+        binding.signUpButton.isEnabled = true
+        binding.signUpButton.text = "Create Account"
+
+        if (user != null) {
+            // User is signed in, navigate to JournalList
+            val intent = Intent(this, JournalList::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
     }
 
     public override fun onStart() {
@@ -64,7 +104,10 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     public fun reload() {
-        TODO("Not yet implemented")
+        // User is already signed in, navigate to JournalList
+        val intent = Intent(this, JournalList::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
-
 }
