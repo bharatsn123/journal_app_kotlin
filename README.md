@@ -166,36 +166,6 @@ storageReference.child("journal_images/$filename")
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- **Google Firebase** - For providing excellent backend services
-- **Material Design** - For the beautiful design system
-- **Android Community** - For continuous support and resources
-
-## 📞 Support
-
-If you have any questions or need help with the application:
-
-- **Issues**: Create an issue in the GitHub repository
-- **Email**: contact@yourdomain.com
-- **Documentation**: Check the inline code comments for detailed explanations
-
-## 🔮 Future Enhancements
-
-- [ ] **Rich Text Editor** - Support for formatting, links, and lists
-- [ ] **Mood Tracking** - Add mood indicators to journal entries
-- [ ] **Tags & Categories** - Organize entries with custom tags
-- [ ] **Export Feature** - Export journal entries as PDF or text
-- [ ] **Backup & Sync** - Automatic cloud backup and cross-device sync
-- [ ] **Voice Notes** - Add audio recordings to journal entries
-- [ ] **Location Tagging** - Add location data to entries
-- [ ] **Social Features** - Share entries with trusted friends/family
-
----
-
-**Made with ❤️ for the Android community**
-
-*This application demonstrates modern Android development practices, Firebase integration, and Material Design principles.*
 
 
 
