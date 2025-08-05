@@ -35,13 +35,6 @@ A modern, feature-rich Android journaling application that allows users to creat
 - **Firebase Storage** - Cloud storage for image uploads
 - **Firebase BoM** - Dependency management for Firebase services
 
-### Libraries & Dependencies
-- **Glide** - Efficient image loading and caching
-- **AndroidX** - Modern Android support libraries
-- **Material Components** - Material Design UI components
-- **ConstraintLayout** - Advanced layout management
-- **RecyclerView** - Efficient list display
-
 ### Development Tools
 - **Android Studio** - Official Android development IDE
 - **Gradle** - Build automation and dependency management
