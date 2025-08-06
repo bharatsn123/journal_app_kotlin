@@ -51,8 +51,8 @@ A modern, feature-rich Android journaling application that allows users to creat
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/journal-application.git
-   cd journal-application
+   git clone https://github.com/bharatsn123/journal_app_kotlin.git
+   cd journal_app_kotlin
    ```
 
 2. **Set up Firebase**
